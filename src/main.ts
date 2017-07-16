@@ -9,6 +9,6 @@ if (environment.production) {
 }
 
 
-Zmiany Artura
+Zmiany Artura2
 
 platformBrowserDynamic().bootstrapModule(AppModule);
