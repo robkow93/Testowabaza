@@ -1,0 +1,38 @@
+
+
+<!--
+<hero-detail [hero]="selectedHero"></hero-detail> teraz zamiast tego uzywamy to co nizej-->
+
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+<!--
+  Klikajac w danego hero, wywolujemy onSelect(hero), ktora ustawia selectedHero 
+  i teraz wskazujemy hero-detail.component ze jego obiekt z INPUTA (hero) to selectedHero
+  i on ma o nim info teraz i wyswietla swoje.
+ --> 
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"> <!--  That's the same hero variable you defined previously in the ngFor directive -->
+    <!--
+        Nadaje klase selected temu ktory spelnia wyrazenie
+    -->
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+

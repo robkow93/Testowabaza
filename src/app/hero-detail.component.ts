@@ -1,0 +1,47 @@
+import { Component, Input, OnInit } from '@angular/core'; //musimy dac Input zeby mozna bylo @input dac
+//import { Hero } from './hero'; //potrzebne kiedy bral od rodzica
+
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Location }                 from '@angular/common';
+import { HeroService } from './hero.service';
+import { Hero } from './hero';
+
+import 'rxjs/add/operator/switchMap';
+
+
+
+@Component({
+  selector: 'hero-detail',
+  templateUrl: './hero-detail.component.html',
+  //styleUrls: ['./app.component.css'] 
+})
+
+
+export class HeroDetailComponent implements OnInit {
+    //@Input() hero: Hero; //dostaje tego hero od swojego rodzica (app.component)
+    //input juz niepotrzebny
+
+hero: Hero;
+
+  constructor(
+  private heroService: HeroService,
+  private route: ActivatedRoute,
+  private location: Location
+) {}
+
+
+
+ngOnInit(): void {
+  this.route.paramMap
+    .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
+    .subscribe(hero => this.hero = hero);
+}
+
+goBack(): void {
+  this.location.back();
+}
+
+}
+
+
+
