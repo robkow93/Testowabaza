@@ -9,6 +9,6 @@ if (environment.production) {
 }
 
 
-Zmiany Artura
+Zmiany Roberta
 
 platformBrowserDynamic().bootstrapModule(AppModule);
