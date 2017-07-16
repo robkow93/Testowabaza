@@ -7,6 +7,8 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
-dfgdfgdfgd
-gdfg
+
+
+Zmiany Roberta
+
 platformBrowserDynamic().bootstrapModule(AppModule);
