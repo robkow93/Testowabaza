@@ -10,9 +10,9 @@ export class HeroService {
 
 /* to jest do synchronicznego , z pliku itd
 
-  getHeroes(): Hero[] {               //funkcja zwracjaaca cos co jest typu tablicowego i ma obiekty klasy Hero
-  return HEROES;                      // a jest tym cala tablica hero
-  }
+  getHeroes(): Hero[] {               //funkcja zwracjaaca cos co jest typu tablicowego i ma obiekty klasy Heroas
+asas
+5a5s
 
 */
 
