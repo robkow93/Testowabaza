@@ -8,6 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-zmiana arczi
+
 
 platformBrowserDynamic().bootstrapModule(AppModule);
