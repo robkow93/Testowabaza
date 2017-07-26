@@ -9,6 +9,5 @@ if (environment.production) {
 }
 
 
-Zmiany Roberta
 
 platformBrowserDynamic().bootstrapModule(AppModule);
